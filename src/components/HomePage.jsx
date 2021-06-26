@@ -1,30 +1,30 @@
 import React, { useState } from "react";
-import SingleMeal from "./SingleMeal/Meals";
+import SingleMeal from "./Meal/Meals";
 import MealPlan from "./MealPlan/MealPlan";
 
 export default function HomePage() {
-  const [singleMeal, setSingleMeal] = useState(false);
+  const [meal, setMeal] = useState(false);
   const [mealPlan, setMealPlan] = useState(false);
 
-  function handleSingleMeal() {
-    setSingleMeal(true);
+  function handleMeal() {
+    setMeal(true);
     setMealPlan(false);
   }
 
   function handleMealPlan() {
     setMealPlan(true);
-    setSingleMeal(false);
+    setMeal(false);
   }
 
   return (
     <div className="home-page-container">
       <button
-        style={singleMeal ? { display: "none" } : {}}
-        onClick={handleSingleMeal}
+        style={meal ? { display: "none" } : {}}
+        onClick={handleMeal}
       >
         Single Meal
       </button>
-      {singleMeal && <SingleMeal />}
+      {meal && <SingleMeal />}
       <button
         style={mealPlan ? { display: "none" } : {}}
         onClick={handleMealPlan}

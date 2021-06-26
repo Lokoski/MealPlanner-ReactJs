@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import MealList from './MealList'
 
 function Meals() {
 
   const [mealInfo, setMealInfo] = useState(null);
-  const [minCalories, setMinCalories] = useState(2000);
-  const [maxCalories, setMaxCalories] = useState(2000);
+  const [minCalories, setMinCalories] = useState(0);
+  const [maxCalories, setMaxCalories] = useState(0);
   const [protein, setProtein] = useState(0);
   const [carbs, setCarbs] = useState(0);
   const [fats, setFats] = useState(0);
@@ -21,13 +22,13 @@ function Meals() {
     setProtein(e.target.value);
   }
 
-  function handleChangeCarbs(e) {
-    setCarbs(e.target.value);
-  }
+  // function handleChangeCarbs(e) {
+  //   setCarbs(e.target.value);
+  // }
 
-  function handleChangeFats(e) {
-    setFats(e.target.value);
-  }
+  // function handleChangeFats(e) {
+  //   setFats(e.target.value);
+  // }
 
   //API KEY 42551a2ea4e542d98149accec741587d
 
@@ -35,7 +36,13 @@ function Meals() {
 
   function getMealData() {
     fetch(
-      `https://api.spoonacular.com/recipes/findByNutrients?apiKey=42551a2ea4e542d98149accec741587d&minCarbs=${carbs}&minProtein=${protein}&minFat=${fats}&maxCalories=${maxCalories}&minCalories=${minCalories}`
+      `https://api.spoonacular.com/recipes/findByNutrients?apiKey=42551a2ea4e542d98149accec741587d&minCarbs=${carbs}&minProtein=${protein}&minFat=${fats}&maxCalories=${maxCalories}&minCalories=${minCalories}`, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+      }
     )
       .then((res) => res.json())
       .then((data) => {
@@ -51,26 +58,29 @@ function Meals() {
 
   return (
     <div className="Meals">
-      <div className="container">
+      <form className="container">
         <input
           type="number"
           placeholder="Min Calories (e.g. 2000)"
           onChange={handleChangeMinCalories}
+          required
         />
 
-<input
+        <input
           type="number"
           placeholder="Max Calories (e.g. 2000)"
           onChange={handleChangeMaxCalories}
+          required
         />
 
         <input
           type="number"
-          placeholder="Protein"
+          placeholder="Minimum Protein"
+          max="99"
           onChange={handleChangeProtein}
         />
 
-        <input
+        {/* <input
           type="number"
           placeholder="Carbs"
           onChange={handleChangeCarbs}
@@ -80,11 +90,11 @@ function Meals() {
           type="number"
           placeholder="Fats"
           onChange={handleChangeFats}
-        />
+        /> */}
 
         <button onClick={getMealData} className="button">Get Meal Plan</button>
-      </div>
-      {/* {mealInfo && <MealList mealInfo={mealInfo}} */}
+      </form>
+      {mealInfo && <MealList mealInfo={mealInfo}/>}
     </div>
   );
 }
