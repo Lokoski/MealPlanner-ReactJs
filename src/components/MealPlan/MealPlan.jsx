@@ -11,10 +11,9 @@ export default function MealPlan() {
     }
 
     function getMealPlan(){
-        fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=42551a2ea4e542d98149accec741587d&timeFrame=day&targetCalories=${calories}`, {
+        fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=2e618e51bf8e49c493a61516d7a4c1ee&timeFrame=day&targetCalories=${calories}`, {
             method: 'GET',
             headers: {
-              'Accept': 'application/json',
               'Content-Type': 'application/json',
             },
           })
@@ -23,9 +22,7 @@ export default function MealPlan() {
             setMeals(data)
             console.log(data)
         })
-        .catch(() => {
-            console.log('error')
-        })
+        .catch(err => err.message )
     }
 
     return (

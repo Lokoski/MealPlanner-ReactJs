@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SingleMeal from "./Meal/Meals";
+import SingleMeal from "./Meal/MealsPlan";
 import MealPlan from "./MealPlan/MealPlan";
 
 export default function HomePage() {
