@@ -17,21 +17,24 @@ export default function HomePage() {
   }
 
   return (
-    <div className="home-page-container">
-      <button
-        style={meal ? { display: "none" } : {}}
-        onClick={handleMeal}
-      >
-        Single Meal
-      </button>
-      {meal && <SingleMeal />}
-      <button
-        style={mealPlan ? { display: "none" } : {}}
-        onClick={handleMealPlan}
-      >
-        Meal Plan
-      </button>
-      {mealPlan && <MealPlan />}
+    <div className="container">
+      <h1>
+        WE ARE HERE TO HELP YOU DECIDE WHAT TO EAT! PLEASE CHOOSE A PREFERRED
+        OPTION{" "}
+      </h1>
+      <div className="home-page">
+        <button style={meal ? { display: "none" } : {}} onClick={handleMeal}>
+          Single Meal
+        </button>
+        {meal && <SingleMeal />}
+        <button
+          style={mealPlan ? { display: "none" } : {}}
+          onClick={handleMealPlan}
+        >
+          Meal Plan
+        </button>
+        {mealPlan && <MealPlan />}
+      </div>
     </div>
   );
 }

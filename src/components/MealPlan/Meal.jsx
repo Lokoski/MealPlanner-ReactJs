@@ -9,7 +9,6 @@ export default function Meal({meal}) {
     .then(res => res.json())
     .then(data => {
         setImageUrl(data.image)
-        console.log(data.image)
     })
     .catch(err => err.message)
     }, [meal.id])

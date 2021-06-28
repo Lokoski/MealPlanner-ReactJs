@@ -2,11 +2,30 @@ body{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  background-color: rgb(90, 63, 63);
 }
 
-.home-page-container{
-  min-height: 100vh;
+
+.container > h1 {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+.home-page{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 23rem;
+}
+
+.home-page > button{
+  font-size: 3rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(104, 104, 192);
+  color: whitesmoke;
+  padding:8px;
+}
+
+.home-page > button:hover{
+  background-color: rgb(25, 25, 104);
 }
