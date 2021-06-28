@@ -9,6 +9,7 @@ body{
 .container > h1 {
   display: flex;
   justify-content: center;
+  color: rgb(104, 104, 192);
 }
 
 .home-page{
@@ -17,15 +18,16 @@ body{
   margin-top: 23rem;
 }
 
-.home-page > button{
+.link{
   font-size: 3rem;
   border-radius: 10px;
   cursor: pointer;
   background-color: rgb(104, 104, 192);
   color: whitesmoke;
   padding:8px;
+  text-decoration: none;
 }
 
-.home-page > button:hover{
+.link:hover{
   background-color: rgb(25, 25, 104);
 }

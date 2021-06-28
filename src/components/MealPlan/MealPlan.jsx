@@ -1,5 +1,6 @@
 import React,{ useState } from 'react';
 import MealPlanList from './MealPlanList'
+import {Link} from 'react-router-dom'
 
 export default function MealPlan() {
 
@@ -30,6 +31,8 @@ export default function MealPlan() {
             <input type="number" onChange={handleChange} placeholder="Calories (e.g. 2000)" />
             <button onClick={getMealPlan}>Get Meal Plan</button>
             {meals && <MealPlanList  meals={meals} />}
+            <Link className="link" to='/meal'>Single Meal</Link>
+            <Link className="link" to='/'>Home</Link>
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MealsList from "./MealsList";
+import { Link } from 'react-router-dom'
 
 function MealsPlan() {
   const [mealInfo, setMealInfo] = useState(null);
@@ -60,6 +61,8 @@ function MealsPlan() {
         Get a Meal
       </button>
       {mealInfo && <MealsList mealInfo={mealInfo} />}
+      <Link className="link" to='/mealplan'>Meal Plan</Link>
+      <Link className="link" to='/'>Home</Link>
     </div>
   );
 }

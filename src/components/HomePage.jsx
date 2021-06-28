@@ -1,20 +1,21 @@
 import React, { useState } from "react";
-import SingleMeal from "./Meal/MealsPlan";
-import MealPlan from "./MealPlan/MealPlan";
+// import SingleMeal from "./Meal/MealsPlan";
+// import MealPlan from "./MealPlan/MealPlan";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
-  const [meal, setMeal] = useState(false);
-  const [mealPlan, setMealPlan] = useState(false);
+  // const [meal, setMeal] = useState(false);
+  // const [mealPlan, setMealPlan] = useState(false);
 
-  function handleMeal() {
-    setMeal(true);
-    setMealPlan(false);
-  }
+  // function handleMeal() {
+  //   setMeal(true);
+  //   setMealPlan(false);
+  // }
 
-  function handleMealPlan() {
-    setMealPlan(true);
-    setMeal(false);
-  }
+  // function handleMealPlan() {
+  //   setMealPlan(true);
+  //   setMeal(false);
+  // }
 
   return (
     <div className="container">
@@ -23,17 +24,8 @@ export default function HomePage() {
         OPTION{" "}
       </h1>
       <div className="home-page">
-        <button style={meal ? { display: "none" } : {}} onClick={handleMeal}>
-          Single Meal
-        </button>
-        {meal && <SingleMeal />}
-        <button
-          style={mealPlan ? { display: "none" } : {}}
-          onClick={handleMealPlan}
-        >
-          Meal Plan
-        </button>
-        {mealPlan && <MealPlan />}
+        <Link className="link" to="/mealplan">Single Meal</Link>
+        <Link className="link" to="/meal">Meal Plan</Link>
       </div>
     </div>
   );
