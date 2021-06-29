@@ -21,18 +21,22 @@ export default function MealPlan() {
         .then(res => res.json())
         .then(data => {
             setMeals(data)
-            console.log(data)
         })
         .catch(err => err.message )
     }
 
     return (
-        <div>
-            <input type="number" onChange={handleChange} placeholder="Calories (e.g. 2000)" />
-            <button onClick={getMealPlan}>Get Meal Plan</button>
-            {meals && <MealPlanList  meals={meals} />}
-            <Link className="link" to='/meal'>Single Meal</Link>
-            <Link className="link" to='/'>Home</Link>
-        </div>
+        <main>
+            <nav className="nav">
+                <Link className="nav-link" to='/meal'>Single Meal</Link>
+                <Link className="nav-link" to='/'>Home</Link>
+            </nav>
+            <div className="meal-plan">
+                <input type="number" onChange={handleChange} placeholder="Calories (e.g. 2000)" />
+                <button onClick={getMealPlan}>Get Meal Plan</button>
+                {meals && <MealPlanList  meals={meals} />}
+            </div>
+        </main>
+        
     )
 }

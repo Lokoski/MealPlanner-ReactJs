@@ -2,14 +2,14 @@ body{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-color: rgb(90, 63, 63);
+  background-color: #2a2a47;
 }
 
 
 .container > h1 {
   display: flex;
   justify-content: center;
-  color: rgb(104, 104, 192);
+  color: #116466;
 }
 
 .home-page{
@@ -22,12 +22,141 @@ body{
   font-size: 3rem;
   border-radius: 10px;
   cursor: pointer;
-  background-color: rgb(104, 104, 192);
-  color: whitesmoke;
+  background-color: #116466;
+  color: #c8dadd;
   padding:8px;
   text-decoration: none;
 }
 
 .link:hover{
-  background-color: rgb(25, 25, 104);
+  background-color: #204644;
+}
+
+.mealplan-container{
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  color: #116466;
+}
+
+
+.macros > h1{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom: 2rem;
+  color: #c8dadd;
+}
+.macros > ul{
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  list-style: none;
+  font-size: 1.25rem;
+  color: #c8dadd;
+}
+
+.meals{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: #c8dadd;
+  margin: 1rem;
+}
+
+.meal{
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  margin: 0 2rem;
+  max-width: 350px;
+  box-shadow: 3px 3px 5px 6px rgba(35, 88, 88, 0.75);
+  background-color: #2b2b4b
+}
+
+.meal > h1{
+ 
+}
+
+.meal-plan{
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+}
+
+.meal-plan > input{
+  width: 17rem;
+  height: 1.25rem;
+  text-align: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+}
+
+.meal-plan > button{
+  padding: 0.5rem 1rem;
+  width: 18.25rem;
+  height: 2.5rem;
+  background-color: #116466;
+  color: #c8dadd;
+  border: none;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+}
+
+.meal-plan > button:hover{
+  background-color: #204644;
+  cursor: pointer;
+}
+
+
+.nav{
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.nav-link {
+  font-size:1.25rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #116466;
+  color: #c8dadd;
+  padding:7px;
+  text-decoration: none;
+  margin: 0 .5rem;
+}
+
+.nav-link:hover{
+  background-color: #204644;
+}
+.single-meal{
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+}
+
+.single-meal > input{
+  width: 17rem;
+  height: 1.25rem;
+  text-align: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.single-meal > button{
+  padding: 0.5rem 1rem;
+  width: 18.25rem;
+  height: 2.5rem;
+  background-color: #116466;
+  color: #c8dadd;
+  border: none;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+}
+
+.single-meal >button:hover{
+  background-color: #204644;
+  cursor: pointer;
 }

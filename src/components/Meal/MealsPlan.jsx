@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import MealsList from "./MealsList";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 function MealsPlan() {
   const [mealInfo, setMealInfo] = useState(null);
@@ -39,31 +39,40 @@ function MealsPlan() {
   }
 
   return (
-    <div>
-      <input
-        type="number"
-        placeholder="Min Calories (e.g. 2000)"
-        onChange={handleChangeMinCalories}
-        required
-      />
-      <input
-        type="number"
-        placeholder="Max Calories (e.g. 2000)"
-        onChange={handleChangeMaxCalories}
-        required
-      />
-      <input
-        type="number"
-        placeholder="Protein"
-        onChange={handleChangeProtein}
-      />
-      <button onClick={getMealData} className="button">
-        Get a Meal
-      </button>
-      {mealInfo && <MealsList mealInfo={mealInfo} />}
-      <Link className="link" to='/mealplan'>Meal Plan</Link>
-      <Link className="link" to='/'>Home</Link>
-    </div>
+    <main>
+      <nav className="nav">
+        <Link className="nav-link" to="/mealplan">
+          Meal Plan
+        </Link>
+        <Link className="nav-link" to="/">
+          Home
+        </Link>
+      </nav>
+      
+      <div className="single-meal">
+        <input
+          type="number"
+          placeholder="Min Calories (e.g. 2000)"
+          onChange={handleChangeMinCalories}
+          required
+        />
+        <input
+          type="number"
+          placeholder="Max Calories (e.g. 2000)"
+          onChange={handleChangeMaxCalories}
+          required
+        />
+        <input
+          type="number"
+          placeholder="Protein"
+          onChange={handleChangeProtein}
+        />
+        <button onClick={getMealData} className="button">
+          Get a Meal
+        </button>
+        {mealInfo && <MealsList mealInfo={mealInfo} />}
+      </div>
+    </main>
   );
 }
 

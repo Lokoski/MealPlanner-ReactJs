@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 // import SingleMeal from "./Meal/MealsPlan";
 // import MealPlan from "./MealPlan/MealPlan";
 import { Link } from "react-router-dom";
@@ -7,7 +7,7 @@ export default function HomePage() {
   // const [meal, setMeal] = useState(false);
   // const [mealPlan, setMealPlan] = useState(false);
 
-  // function handleMeal() {
+  // function handleMeal() 
   //   setMeal(true);
   //   setMealPlan(false);
   // }
@@ -19,10 +19,7 @@ export default function HomePage() {
 
   return (
     <div className="container">
-      <h1>
-        WE ARE HERE TO HELP YOU DECIDE WHAT TO EAT! PLEASE CHOOSE A PREFERRED
-        OPTION{" "}
-      </h1>
+      <h1>MEAL PLANNER</h1>
       <div className="home-page">
         <Link className="link" to="/mealplan">Single Meal</Link>
         <Link className="link" to="/meal">Meal Plan</Link>

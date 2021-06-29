@@ -14,7 +14,7 @@ export default function Meal({meal}) {
     }, [meal.id])
     
     return (
-        <div>
+        <div className="meal">
             <h1>{meal.title}</h1>
             <img src={imageUrl} alt="recipes" />
             <ul>
