@@ -33,7 +33,6 @@ function MealsPlan() {
       .then((res) => res.json())
       .then((data) => {
         setMealInfo(data);
-        console.log(data);
       })
       .catch((err) => err.message);
   }
@@ -54,20 +53,18 @@ function MealsPlan() {
           type="number"
           placeholder="Min Calories (e.g. 2000)"
           onChange={handleChangeMinCalories}
-          required
         />
         <input
           type="number"
           placeholder="Max Calories (e.g. 2000)"
           onChange={handleChangeMaxCalories}
-          required
         />
         <input
           type="number"
           placeholder="Protein"
           onChange={handleChangeProtein}
         />
-        <button onClick={getMealData} className="button">
+        <button onClick={getMealData}>
           Get a Meal
         </button>
         {mealInfo && <MealsList mealInfo={mealInfo} />}

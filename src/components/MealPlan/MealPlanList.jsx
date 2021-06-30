@@ -9,11 +9,11 @@ const nutrients = meals.nutrients;
         <div className="mealplan-container">
             <section className="macros">
                 <h1>Meals Macros</h1>
-                <ul>
-                    <li>Calories: {nutrients.calories}</li>
-                    <li>Protein: {nutrients.protein} g</li>
-                    <li>Carbs: {nutrients.carbohydrates} g</li>
-                    <li>Fats: {nutrients.fat} g</li>
+                <ul className="macros-list">
+                    <li>Calories: {nutrients.calories.toFixed(0)}</li>
+                    <li>Protein: {nutrients.protein.toFixed(0)} g</li>
+                    <li>Carbs: {nutrients.carbohydrates.toFixed(0)} g</li>
+                    <li>Fats: {nutrients.fat.toFixed(0)} g</li>
                 </ul>
             </section>
 

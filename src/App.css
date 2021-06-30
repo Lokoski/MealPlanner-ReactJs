@@ -39,13 +39,17 @@ body{
   color: #116466;
 }
 
+.mealplan-container > h1 {
+  text-align: center;
+}
+
 
 .macros > h1{
   display: flex;
   align-items:center;
   justify-content:center;
   margin-bottom: 2rem;
-  color: #c8dadd;
+  color: #116466;
 }
 .macros > ul{
   display: flex;
@@ -53,7 +57,7 @@ body{
   align-items:center;
   list-style: none;
   font-size: 1.25rem;
-  color: #c8dadd;
+  color: #116466;
 }
 
 .meals{
@@ -71,12 +75,27 @@ body{
   margin: 0 2rem;
   max-width: 350px;
   box-shadow: 3px 3px 5px 6px rgba(35, 88, 88, 0.75);
-  background-color: #2b2b4b
+  background-color: rgb(129, 127, 192);
+  color:#116466;
 }
 
 .meal > h1{
- 
+ font-size: 1.25rem;
+ text-align: center;
 }
+
+.meal > a {
+  font-size: 1.25rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #116466;
+  color: #c8dadd;
+  padding:8px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 1.75rem;
+}
+
 
 .meal-plan{
   display: flex;
@@ -134,11 +153,12 @@ body{
   display: flex;
   align-items: center;
   flex-direction: column; 
+  margin: 0;
 }
 
 .single-meal > input{
   width: 17rem;
-  height: 1.25rem;
+  height: 1rem;
   text-align: center;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
@@ -159,4 +179,37 @@ body{
 .single-meal >button:hover{
   background-color: #204644;
   cursor: pointer;
+}
+
+@media only screen and (max-width:1024px) {
+
+  .mealplan-container{
+    min-width: 100%;
+  }
+  .meals{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav{
+    display: flex;
+    justify-content: center;
+  }
+
+  .meal{
+   margin-bottom: 1rem;
+  }
+
+
+
+  .macros-list >li{
+   
+  }
 }
