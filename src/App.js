@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import HomePage from "./components/HomePage"
-import {Switch, Route} from "react-router-dom"
+import { Redirect, Switch, Route}  from "react-router-dom"
 import SingleMeal from "./components/Meal/MealsPlan";
 import MealPlan from "./components/MealPlan/MealPlan";
 
@@ -14,6 +14,7 @@ function App() {
         <Route path="/" component={HomePage} exact />
         <Route path="/Meal" component={SingleMeal} />
         <Route path="/MealPlan" component={MealPlan} />
+        <Redirect to="/" />
     </Switch>
     </div>
   );

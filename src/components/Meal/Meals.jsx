@@ -15,6 +15,7 @@ export default function Meals( {meals} ) {
     .catch(err => err.message)
     }, [meals.id])
 
+
     return (
         <div className="meal">
             <h1>{meals.title}</h1>

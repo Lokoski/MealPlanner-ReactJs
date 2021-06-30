@@ -1,10 +1,10 @@
 import React from 'react'
 import Meal from './Meal'
+import Error from '../Error';
 
 export default function MealPlanList({ meals }) {
 const nutrients = meals.nutrients;
-
-
+if(nutrients){
     return (
         <div className="mealplan-container">
             <section className="macros">
@@ -24,4 +24,8 @@ const nutrients = meals.nutrients;
             </section>
         </div>
     )
+}else{
+    return <Error />
+}
+    
 }

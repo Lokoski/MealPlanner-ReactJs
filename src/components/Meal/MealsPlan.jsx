@@ -39,6 +39,7 @@ function MealsPlan() {
 
   return (
     <main>
+    
       <nav className="nav">
         <Link className="nav-link" to="/mealplan">
           Meal Plan
