@@ -1,24 +1,27 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   background-color: #2a2a47;
+  font-family: 'Playfair Display', serif;
 }
-
 
 .container > h1 {
   display: flex;
   justify-content: center;
   color: #116466;
+  font-size: 5rem;
 }
 
-.home-page{
+.home-page {
   display: flex;
   justify-content: space-evenly;
   margin-top: 23rem;
 }
 
-.link{
+.link {
   font-size: 3rem;
   border-radius: 10px;
   cursor: pointer;
@@ -28,11 +31,11 @@ body{
   text-decoration: none;
 }
 
-.link:hover{
+.link:hover {
   background-color: #204644;
 }
 
-.mealplan-container{
+.mealplan-container {
   display: flex;
   justify-content:center;
   flex-direction: column;
@@ -51,7 +54,7 @@ body{
   margin-bottom: 2rem;
   color: #116466;
 }
-.macros > ul{
+.macros > ul {
   display: flex;
   justify-content: space-around;
   align-items:center;
@@ -60,15 +63,15 @@ body{
   color: #116466;
 }
 
-.meals{
+.meals {
   display: flex;
   align-items: center;
   flex-direction: row;
-  color: #c8dadd;
+  color: #46575a;
   margin: 1rem;
 }
 
-.meal{
+.meal {
   display: flex;
   flex-direction: column;
   padding: 3rem;
@@ -79,10 +82,13 @@ body{
   color:#116466;
 }
 
-.meal > h1{
+.meal > h1 {
  font-size: 1.25rem;
  text-align: center;
+ margin-bottom: 3rem;
 }
+
+
 
 .meal > a {
   font-size: 1.25rem;
@@ -103,7 +109,7 @@ body{
   flex-direction: column; 
 }
 
-.meal-plan > input{
+.meal-plan > input {
   width: 17rem;
   height: 1.25rem;
   text-align: center;
@@ -112,7 +118,7 @@ body{
   font-size: 1.75rem;
 }
 
-.meal-plan > button{
+.meal-plan > button {
   padding: 0.5rem 1rem;
   width: 18.25rem;
   height: 2.5rem;
@@ -123,7 +129,7 @@ body{
   font-size: 1.25rem;
 }
 
-.meal-plan > button:hover{
+.meal-plan > button:hover {
   background-color: #204644;
   cursor: pointer;
 }
@@ -146,7 +152,7 @@ body{
   margin: 0 .5rem;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   background-color: #204644;
 }
 .single-meal{
@@ -176,7 +182,7 @@ body{
   font-size: 1.25rem;
 }
 
-.single-meal >button:hover{
+.single-meal > button:hover{
   background-color: #204644;
   cursor: pointer;
 }
@@ -207,10 +213,22 @@ body{
   cursor: pointer;
 }
 
+.macros-list {
+  width:auto;
+  margin-right: 2.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  list-style:none;
+}
+
+.macros-list > li {
+  margin-bottom: 0.5rem;
+}
+
 @media only screen and (max-width:1024px) {
 
   .mealplan-container{
-    min-width: 100%;
+    width: 100vw;
   }
   .meals{
     flex-direction: column;
@@ -231,6 +249,7 @@ body{
 
   .meal{
    margin-bottom: 1rem;
+    max-width: 70vw;
   }
 
   .error{
@@ -238,7 +257,17 @@ body{
     font-size: 0.35rem;
   }
 
-  .macros-list >li{
-   
+  .macros-list {
+    display: inline-block;
+    text-align: left; 
+    list-style:circle;
+  }
+
+  .container > h1 {
+    font-size: 2rem;
+  }
+
+  .link{
+    font-size: 1.25rem;
   }
 }

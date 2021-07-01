@@ -11,6 +11,7 @@ export default function MealPlan() {
         setCalories(e.target.value);
     }
 
+    
     function getMealPlan(){
         fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=2e618e51bf8e49c493a61516d7a4c1ee&timeFrame=day&targetCalories=${calories}`, {
             method: 'GET',

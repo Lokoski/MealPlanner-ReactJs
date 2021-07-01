@@ -4,8 +4,7 @@ export default function Meal({meal}) {
 
     const[imageUrl, setImageUrl] = useState("");
 
-
-    useEffect(() =>{
+    useEffect(() => {
         fetch(`https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=2e618e51bf8e49c493a61516d7a4c1ee&includeNutrition=false`)
     .then(res => res.json())
     .then(data => {

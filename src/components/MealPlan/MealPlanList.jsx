@@ -24,8 +24,6 @@ if(nutrients){
             </section>
         </div>
     )
-}else{
-    return <Error />
 }
-    
+    return <Error />   
 }

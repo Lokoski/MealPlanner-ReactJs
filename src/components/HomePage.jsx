@@ -21,8 +21,8 @@ export default function HomePage() {
     <div className="container">
       <h1>MEAL PLANNER</h1>
       <div className="home-page">
-        <Link className="link" to="/mealplan">Single Meal</Link>
-        <Link className="link" to="/meal">Meal Plan</Link>
+        <Link className="link" to="/meal">Single Meal</Link>
+        <Link className="link" to="/mealplan">Meal Plan</Link>
       </div>
     </div>
   );

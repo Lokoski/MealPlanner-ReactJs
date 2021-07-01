@@ -20,7 +20,7 @@ export default function Meals( {meals} ) {
         <div className="meal">
             <h1>{meals.title}</h1>
             <img src={meals.image} alt="recipes" />
-            <ul className="">
+            <ul className="macros-list">
                 <li>Calories: {meals.calories} </li>
                 <li>Protein: {meals.protein}</li>
                 <li>Carbs: {meals.carbs}</li>

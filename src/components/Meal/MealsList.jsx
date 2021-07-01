@@ -3,8 +3,7 @@ import Meals from "./Meals";
 import Error from "../Error"
 
 export default function MealList({ mealInfo }) {
-
-  if(mealInfo.id){
+  if(mealInfo[0]){
     return (
       <div className="mealplan-container">
         <h1>Choose your meal:</h1>
@@ -15,9 +14,7 @@ export default function MealList({ mealInfo }) {
         </section>
       </div>
     );
-  }else{
-    return <Error />
   }
-  
+    return <Error /> 
 }
 
